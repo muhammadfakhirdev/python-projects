@@ -1,0 +1,39 @@
+import tkinter as tk  # Imports the GUI library and names it 'tk' to keep code short
+from time import strftime  # Imports the tool used to read and format the computer's clock
+
+
+# This function updates the clock display
+def time():
+    # Grabs the current time/date and turns it into text (Hour:Minute:Second AM/PM \n NewLine Date)
+    string = strftime("%H:%M:%S:%p \n %D")
+
+    # Changes the text on our label to show the updated time string
+    label.config(text=string)
+
+    # Waits 1000 milliseconds (1 second) and then runs this 'time' function again
+    # This keeps the clock ticking every second
+    label.after(1000, time)
+
+
+# Creates the actual main blank window on your screen
+root = tk.Tk()
+
+# Sets the text that appears at the very top bar of the window
+root.title("Digital Clock")
+
+# Creates a text box (Label). The 'root' argument tells it to live inside our main window.
+label = tk.Label(
+    root,
+    font=("calibri", 50, "bold"),
+    background="black",
+    foreground="white",
+)
+
+# Places the label into the window and positions it directly in the center
+label.pack(anchor="center")
+
+# Calls the time function for the first time to start the clock ticking
+time()
+
+# Tells the computer to keep the window open and running until you click the 'X' button
+root.mainloop()
