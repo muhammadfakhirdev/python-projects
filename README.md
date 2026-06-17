@@ -21,4 +21,19 @@ A simple command-line Python game where the user plays Rock Paper Scissors again
 - User vs computer gameplay  
 - Random computer choice generation  
 - Win, lose, and draw logic  
-- Simple interactive command-line interface  
+- Simple interactive command-line interface
+
+### 3.# 🕒 Digital Clock 
+
+A simple digital clock built using Python and Tkinter that displays real-time system time.
+
+## 🚀 Features
+- Real-time clock display
+- Updates every second
+- Simple GUI using Tkinter
+
+## 🛠️ Tech Stack
+- Python
+- Tkinter
+
+
